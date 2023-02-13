@@ -1,2 +1,2 @@
-# egriffith.github.io
-Hello
+# The Website
+This is the files/code for the small site linked on the homepage. Anyone may veiw the code if they like. Please do not copy.
