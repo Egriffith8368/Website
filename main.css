@@ -4,7 +4,7 @@ body {
     --color-secondary: #252c6a;
     --color-error: #cc3333;
     --color-success: #4bb544;
-    --border-radius: 4px;
+    --border-radius: 6px;
 
     margin: 0;
     height: 75vh;
