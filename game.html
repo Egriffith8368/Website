@@ -1,18 +1,18 @@
 <html>
 	<body>
 	<script>
-	var play=readLine("Welcome to your adventure. Are you ready to play? (type yes or no) ")
+	var play=prompt("Welcome to your adventure. Are you ready to play? (type yes or no) ")
 
 if(play=="yes"){
     
-    var age=readInt("How old are you?")
+    var age=prompt("How old are you?")
     if (age>=15){
-        var select=readLine("Are you sure.......(type yes or no")
+        var select=prompt("Are you sure.......(type yes or no")
             if (select=="yes"){
                 alert("Welcome, lets begin")
                 alert("You are hanging out with some friends at the park. You notice there is a weird man walking around.")
                 alert("You are creeped out about this guy.")
-                var choice1=readInt("Do you tell your friends? (yes or no)")
+                var choice1=prompt("Do you tell your friends? (yes or no)")
                 if (choice1=="yes"){
                     alert("You tell your friends about the man and you all decide to walk to another park togeher.")
                     alert("You guys are all laughing and having fun as you walk to the other park.")
@@ -20,16 +20,16 @@ if(play=="yes"){
                     alert("Your friend walks over to the bathroom")
                     alert("You and your friends continue hanging out waiting for your other friend")
                     alert("You start to feel worried because your friend has been gone for awhile")
-                    var check=readLine("Do you check on your friend(type 'yes' or 'no')")
+                    var check=prompt("Do you check on your friend(type 'yes' or 'no')")
                     if (check=="yes"){
                         alert("You decide to go check on your friend")
                         alert("Your friend says hes fine he just had something weird to eat.")
                         alert("As you walk back to your friends you see movement behind a bush")
-                        var look=readLine("Do you look? (yes or no)")
+                        var look=prompt("Do you look? (yes or no)")
                         if (look=="yes"){
                             alert("As you get closer you see the weird looking guy staring at you and your friends")
                             alert("You start running back to your friends and tell them what you saw")
-                            var police=readLine("Your friends sugest calling the police. Do you agree? (yes or no)")
+                            var police=prompt("Your friends sugest calling the police. Do you agree? (yes or no)")
                             if (police=="yes"){
                                 alert("The man overhears the call and decides to run before the police arive.")
                                 alert("your story ended ")
@@ -58,7 +58,7 @@ if(play=="yes"){
                     alert("You continue hanging out with your friends while keeping a eye on that man.")
                     alert("After a while you lost where the man went ")
                     alert("After about two hours of hanging out at the park you and your friends are tired. One of your friends invites you to go to there house to play so video games.")
-                    var games=readLine("Do you want to go with your friend? (yes or no)")
+                    var games=prompt("Do you want to go with your friend? (yes or no)")
                     if (games=="yes"){
                         
                     }else{
@@ -66,7 +66,7 @@ if(play=="yes"){
                         alert("You see a nice looking man walking the down the sidewalk you are walking on")
                         alert("The nice looking man gets closer to you. Then he askes you 'Do you need a ride home'")
                         alert("The man seems trustworthy but you still dont know if you should trust him.")
-                        var trust=readLine("Do you trust this man? (yes or no)")
+                        var trust=prompt("Do you trust this man? (yes or no)")
                         if (trust=="yes"){
                             alert("The man takes you to his van and you never see your friends again")
                             alert("THE END")
@@ -74,7 +74,7 @@ if(play=="yes"){
                         }else{
                             alert("You tell the man 'NO' and he says suit your self and walks away. You keep walking home when you look behind you to see the creepy looking man run at you smiling. ")
                             alert("You dont know what to do")
-                            var end=readLine("Do you run away from the man or try to attck the man? (type 'attack' to attcak the man or 'run' to run away")
+                            var end=prompt("Do you run away from the man or try to attck the man? (type 'attack' to attcak the man or 'run' to run away")
                             if (end==attack){
                                 alert("You try to fight the man but you end up falling and.....")
                                 alert("YOU NEVER COME BACK!!!!!!")
@@ -95,7 +95,7 @@ if(play=="yes"){
         
     }else{
         alert("Welcome to the game")
-        var pers=readLine("This mode is best played with personalazation. Do you want to add personalazation? (type yes or no)")
+        var pers=prompt("This mode is best played with personalazation. Do you want to add personalazation? (type yes or no)")
         if (pers==yes){
             
         }else{
@@ -104,7 +104,7 @@ if(play=="yes"){
             alert("You want to go back to your house but " + name + " insists to keep going deeper into the forset")
         
             alert("As you continue throught the forset exploreing you come a cross 2 stone paths")
-            var path=readLine("What path do you want to down? ( type 1 or 2)")
+            var path=prompt("What path do you want to down? ( type 1 or 2)")
             if (path==1){
                 
             }else{
@@ -114,7 +114,7 @@ if(play=="yes"){
                 alert("you assume the smoke is a forrest fire")
                 alert("as you look down at your feet for the path you realize you have gone off track")
                 alert("you tell " +name+ " that you guys were off track and started coming up with a plan on where to go")
-                var dir=readLine("Do you want to turn left or right?")
+                var dir=prompt("Do you want to turn left or right?")
             }
         } alert
     }
@@ -122,7 +122,7 @@ if(play=="yes"){
 }else{
     alert("Too bad!!!");
 }
-	<script>
-<body>
-<html>
+	</script>
+</body>
+</html>
 	
