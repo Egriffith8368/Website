@@ -2,14 +2,15 @@
 	<body>
 		<link rel="stylesheet" href="main.css">
 		<div class=contanier>
-			<p><center><b> <p>-----Do you want to play again?-----</center> </b>
-        <p><center><button onclick="window.location.href='https://egriffith8368.github.io/Website/game'" class="sub">YES!!
-</button></center>
+			<center> You game has ended refresh to play againg </center>
+			<center> <p>You game has ended refresh to play again</p></center>
 	<script>
 	var play=prompt("Welcome to your adventure. Are you ready to play? (type yes or no) ")
+
 if(play=="yes"){
-    
+
     var age=prompt("How old are you?")
+    if (age>=15){
     if (age>=13){
         var select=prompt("Are you sure.......(type yes or no")
             if (select=="yes"){
@@ -31,6 +32,7 @@ if(play=="yes"){
                         alert("As you walk back to your friends you see movement behind a bush")
                         var look=prompt("Do you look? (yes or no)")
                         if (look=="yes"){
+                            alert("As you get closer you see the weird looking guy staring at you and your friends")
                             alert("As you get closer you see the weird looking guy staring at your friends")
                             alert("You start running back to your friends and tell them what you saw")
                             var police=prompt("Your friends sugest calling the police. Do you agree? (yes or no)")
@@ -84,17 +86,17 @@ if(play=="yes"){
 				    }else{
 					     alert('you decide not to call the number ')
 					     alert('Your game has ended ')
-					    
+
 				    }
-				    
-				    
+
+
 			    }else{
 				     alert('You decide not to check the breaker.')
 				     alert('You decide to watch some videos on your phone insted')
 				     alert('End of your story')
-				     
+
 			    }
-                        
+
                     }else{
                         alert("Your friends all leave and you start walking home by yourself")
                         alert("You see a nice looking man walking the down the sidewalk you are walking on")
@@ -126,22 +128,21 @@ if(play=="yes"){
                 alert("That sucks")
                 
             }
-
+        
     }else{
         alert("Welcome to the game")
         var pers=prompt("This mode is best played with personalazation. Do you want to add personalazation? (type yes or no)")
         if (pers==yes){
-        alert("Sorry you cant play"
-
+            
         }else{
             name=maya
             alert("You and "+ name + " are in the forest behind your house.")
             alert("You want to go back to your house but " + name + " insists to keep going deeper into the forset")
-
+        
             alert("As you continue throught the forset exploreing you come a cross 2 stone paths")
             var path=prompt("What path do you want to down? ( type 1 or 2)")
             if (path==1){
-
+                
             }else{
                 alert("You and "+ name + " decide to continue going through the foresrt on that path.")
                 alert (name+" is making jokes and your laughing")
@@ -152,26 +153,12 @@ if(play=="yes"){
                 var dir=prompt("Do you want to turn left or right?")
             }
         } alert
-
-        } 
     }
-
+    
 }else{
     alert("Too bad!!!");
 }
 	</script>
-		
 </body>
-		  <style>
-    .sub{
-        background-color:blue;
-        color:white;
-        border:none;
-        width:115px;
-        height: 50px; 
-        border-radius: 10px;
-        cursor: pointer;
-           }
-</style>
 </html>
 	
