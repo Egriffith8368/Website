@@ -1,0 +1,28 @@
+   <!DOCTYPE html>
+<html>
+<head>
+    <title>Login page</title>
+</head>
+<body>
+<b><center>This part of the site is restricted to only people that have access</center>
+<center><p>If you do not have a code request one from me. Or return back home</p></center> 
+<form>
+    <label for="pswd">Please enter your code here: </label>
+    <input type="password" id="pswd">
+    <input type="button" value="Submit" onclick="checkPswd();" />
+</form>
+<!--Function to check password the already set password is admin-->
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "admin";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="https:/egriffith8368.github.io/Website/game.html";
+        }
+        else{
+            alert("Sorry you do not have acsess");
+        }
+    }
+</script>
+</body>
+</html>
