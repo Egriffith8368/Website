@@ -1,17 +1,12 @@
 <html>
 	<body>
-		<link rel="stylesheet" href="main.css">
-		<div class=contanier>
-			<center> You game has ended refresh to play again </center>
-			
 	<script>
 	var play=prompt("Welcome to your adventure. Are you ready to play? (type yes or no) ")
 
 if(play=="yes"){
-
+    
     var age=prompt("How old are you?")
     if (age>=15){
-    if (age>=13){
         var select=prompt("Are you sure.......(type yes or no")
             if (select=="yes"){
                 alert("Welcome, lets begin")
@@ -33,7 +28,6 @@ if(play=="yes"){
                         var look=prompt("Do you look? (yes or no)")
                         if (look=="yes"){
                             alert("As you get closer you see the weird looking guy staring at you and your friends")
-                            alert("As you get closer you see the weird looking guy staring at your friends")
                             alert("You start running back to your friends and tell them what you saw")
                             var police=prompt("Your friends sugest calling the police. Do you agree? (yes or no)")
                             if (police=="yes"){
@@ -66,37 +60,7 @@ if(play=="yes"){
                     alert("After about two hours of hanging out at the park you and your friends are tired. One of your friends invites you to go to there house to play so video games.")
                     var games=prompt("Do you want to go with your friend? (yes or no)")
                     if (games=="yes"){
-			    alert('You and your friend go back to there house to play some video games.')
-				  alert('You and your friend get something to eat when you get a call from a number that is 000-000-001')
-			    	alert('You and your friend dont answer the call and decide to go back to playing some games.')
-			    alert(' You and your friend are in the middle of a game when....')
-			     alert('The power cuts out')
-			     alert('You look outside and see that all the street lights are still on.')
-			     alert('Your frind thinks that the breaker migh have went out')
-			    var breaker=prompt("Do you check? (yes or no)")
-			    if (breaker="yes"){
-				     alert('You walk in to the garage where the breaker is and notice the one for your friends room was burned')
-				     alert('There is a note next to the breaker saying to call 000-000-001')
-				    var call=prompt('Do you call the number? (yes or no)')
-				    if (call="yes"){
-					     alert('You decide to call the number')
-					     alert('The phone imediently stops and starts to shut off')
-					     alert('Then the phone explodes')
-					     alert('End of the story')
-				    }else{
-					     alert('you decide not to call the number ')
-					     alert('Your game has ended ')
-
-				    }
-
-
-			    }else{
-				     alert('You decide not to check the breaker.')
-				     alert('You decide to watch some videos on your phone insted')
-				     alert('End of your story')
-
-			    }
-
+                        
                     }else{
                         alert("Your friends all leave and you start walking home by yourself")
                         alert("You see a nice looking man walking the down the sidewalk you are walking on")
@@ -152,7 +116,7 @@ if(play=="yes"){
                 alert("you tell " +name+ " that you guys were off track and started coming up with a plan on where to go")
                 var dir=prompt("Do you want to turn left or right?")
             }
-        } 
+        } alert
     }
     
 }else{
@@ -161,7 +125,6 @@ if(play=="yes"){
 	</script>
 </body>
 </html>
-	
 
 
                   
