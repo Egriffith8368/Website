@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<style>
+body{
+background: #425e5c;
+margin: 0;
+background-size: auto;
+}
+
+
+.apps{
+width: 100vw;
+height: 100vh;
+
+
+
+
+}
+.apps .swiper-slide{
+gap: 2.5vw;
+padding: 2.5vw;
+box-sizing: border-box;
+
+
+
+}
+.app-icon{
+display: block;
+width: 10%;
+max-height: 10%;
+object-fit: contaion;
+
+
+
+}
+
+
+.app-name{
+text-align: center;
+font-size: 30px;
+padding: 3.5%;
+color: #ffffff;
+
+
+}
+
+.button-go {
+			color: #ffffff;
+			background-color: #2d63c8;
+			font-size: 20px;
+			border: 2px solid #000000;
+			border-radius: 50px;
+			padding: 50px 50px;
+			cursor: pointer
+			
+		}
+		button:hover {
+			background-color: #474747;
+		}
+</style>
+    
+  </head>
+  <body>
+<div class= "swiper apps">
+	<div class= "swiper-wrapper">
+	<div class= "swiper-slide">
+	<div class= "app">
+	<div class= "app-name">
+	<center>Welcome to the site</center>
+		<p><center>Swipe left and right to view </center></p>
+	
+	
+	
+	
+	</div>
+	</div>
+	
+	</div>
+	<div class= "swiper-slide">
+	<div class= "app">
+	<div class= "app-name">
+	<center>Jokes!!!</center>
+	<center><button onclick="window.location.href='https://griffithe.com/Website/jokes.html'" class= "button-go"type="button" name="myButton"> Go!</button></center>
+	</div>
+	</div>
+	</div>
+		<div class= "swiper-slide">
+	<div class= "app">
+	<div class= "app-name">
+	<center>Beta menu</center>
+	<center><button onclick="window.location.href='https://griffithe.com/beta'" class= "button-go"type="button" name="myButton"> Go!</button></center>
+	</div>
+    <center>A small page with some pre relase items</center>
+	</div>
+	</div>
+		<div class= "swiper-slide">
+	<div class= "app">
+	<div class= "app-name">
+	<center>Riddles</center>
+	<center><button onclick="window.location.href='https://griffithe.com/riddles.html'" class= "button-go"type="button" name="myButton"> Go!</button></center>
+	</div>
+	</div>
+	</div>
+    <div class= "swiper-slide">
+        <div class= "app">
+        <div class= "app-name">
+        <center>Feedback</center>
+        <center><button onclick="window.location.href='https://github.com/Egriffith8368/Website/discussions/5'" class= "button-go"type="button" name="myButton"> Go!</button></center>
+        </div>
+        <center>Give me some feedback</center>
+        </div>
+        </div>
+    <main>
+        <h1>Homepage</h1>  
+    </main>
+	<script type="module">
+	
+	
+	import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js';
+	
+	new Swiper(".apps")
+	
+	</script>
+  </body>
+</html>
