@@ -1,0 +1,79 @@
+<html>
+
+    
+
+    <head>
+        <title>Game</title>
+    </head>
+    <body>
+        <p id="content"></p>
+        
+        <script type="text/python">
+            from htmpy import window
+            print("Welcome to griffithe.com")
+            import random
+import time
+option=['rock','paper','scicors']
+user=int(input('1.Rock 2. paper 3. sciscors     type 1,2,or 3:'))
+count=1
+def game():
+    if user == 1:
+        a=random.choice(option)
+        if a =="rock":
+            print(f'I chose {a}')
+            print("Tie")
+        else:
+            if a=="paper":
+                print(f'I chose {a}')
+                print("I win")
+            else:
+                print(f'I chose {a}')
+
+                print("You win")
+                time.sleep(5)
+            
+    else:
+
+        if user == 2:
+            a=random.choice(option)
+            if a =="rock":
+                print(f'I chose {a}')
+                print("You win")
+                time.sleep(5)
+            else:
+                if a=="paper":
+                    print(f'I chose {a}')
+                    print("tie")
+                    time.sleep(5)
+    
+        
+
+                else:
+                    print(f'I chose {a}')
+
+                    print("I win")
+                    time.sleep(5)
+        else:
+            if user == 3:
+                a=random.choice(option)
+                if a =="rock":
+                    print(f'I chose {a}')
+                    print("I win")
+                    time.sleep(5)
+                else:
+                    if a=="paper":
+                        print(f'I chose {a}')
+                        print("you win")
+                        time.sleep(5)
+                    else:
+                        print(f'I chose {a}')
+                        print("Tie")
+                        time.sleep(5)
+game()
+            
+            
+            p = window.document.getElementById("content")
+            p.innerText = "Hello World!"
+        </script>
+    </body>
+</html>
