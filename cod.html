@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shooter Game</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <script>
+        // Get the canvas element and its context
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Set up the player and enemies
+        const player = {
+            x: canvas.width / 2,
+            y: canvas.height - 50,
+            width: 50,
+            height: 50,
+            speed: 5
+        };
+        const enemyRadius = 20;
+        const enemies = [];
+
+        // Set up the game loop
+        let score = 0;
+        let gameOver = false;
+        function gameLoop() {
+            if (gameOver) {
+                return;
+            }
+
+            // Move the player based on key presses
+            if (keys.ArrowLeft) {
+                player.x -= player.speed;
+            }
+            if (keys.ArrowRight) {
+                player.x += player.speed;
+            }
+
+            // Draw the player and enemies
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(player.x, player.y, player.width, player.height);
+            ctx.fillStyle = 'red';
+            for (let i = 0; i < enemies.length; i++) {
+                const enemy = enemies[i];
+                ctx.beginPath();
+                ctx.arc(enemy.x, enemy.y, enemyRadius, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Move the enemies and check for collisions with the player
+            for (let i = 0; i < enemies.length; i++) {
+                const enemy = enemies[i];
+                enemy.y += enemy.speed;
+                const dx = enemy.x - player.x;
+                const dy = enemy.y - player.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                if (distance < enemyRadius + player.width / 2) {
+                    gameOver = true;
+                    alert('Game over!');
+                }
+            }
+
+            // Spawn new enemies
+            if (Math.random() < 0.02) {
+                const enemy = {
+                    x: Math.random() * canvas.width,
+                    y: -enemyRadius,
+                    speed: Math.random() * 3 + 1
+                };
+                enemies.push(enemy);
+            }
+
+            // Update the score and call the game loop again
+            score++;
+            requestAnimationFrame(gameLoop);
+        }
+        requestAnimationFrame(gameLoop);
+
+        // Set up keyboard input
+        const keys = {};
+        window.addEventListener('keydown', (e) => {
+            keys[e.key] = true;
+        });
+        window.addEventListener('keyup', (e) => {
+            keys[e.key] = false;
+        });
+    </script>
+</body>
+</html>
