@@ -1,0 +1,97 @@
+
+ <!DOCTYPE html>
+ <html>
+   <head>
+     <title>DVD Logo Game</title>
+     <style>
+       canvas {
+         border: 1px solid #000;
+       }
+     </style>
+   </head>
+   <body>
+     <canvas id="gameCanvas"></canvas>
+     <script>
+       // Get the canvas element and its context
+       var canvas = document.getElementById("gameCanvas");
+       var ctx = canvas.getContext("2d");
+
+       // Set the initial position and speed of the DVD logo
+       var logoX = canvas.width / 2;
+       var logoY = canvas.height / 2;
+       var logoSpeedX = 2;
+       var logoSpeedY = 2;
+
+       // Set the initial level and score
+       var level = 1;
+       var score = 0;
+
+       // Draw the DVD logo on the canvas
+       function drawLogo() {
+         ctx.clearRect(0, 0, canvas.width, canvas.height);
+         ctx.fillStyle = "#f00";
+         ctx.fillRect(logoX, logoY, 50, 30);
+       }
+
+       // Move the DVD logo based on the joystick input
+       function moveLogo() {
+         logoX += logoSpeedX;
+         logoY += logoSpeedY;
+
+         // Check if the logo hits the edges of the canvas
+         if (logoX + 50 > canvas.width || logoX < 0) {
+           logoSpeedX = -logoSpeedX;
+         }
+
+         if (logoY + 30 > canvas.height || logoY < 0) {
+           logoSpeedY = -logoSpeedY;
+         }
+
+         // Check if the logo hits the corner of the canvas
+         if (logoX === 0 && logoY === 0) {
+           // Increase the level and score, and update the logo speed
+           level++;
+           score += 100;
+           logoSpeedX += level;
+           logoSpeedY += level;
+         }
+       }
+
+       // Update the game every 10 milliseconds
+       setInterval(function() {
+         moveLogo();
+         drawLogo();
+       }, 10);
+
+       // Listen for joystick input
+       document.addEventListener("keydown", function(event) {
+         if (event.key === "ArrowLeft") {
+           logoSpeedX = -Math.abs(logoSpeedX);
+         } else if (event.key === "ArrowRight") {
+           logoSpeedX = Math.abs(logoSpeedX);
+         } else if (event.key === "ArrowUp") {
+           logoSpeedY = -Math.abs(logoSpeedY);
+         } else if (event.key === "ArrowDown") {
+           logoSpeedY = Math.abs(logoSpeedY);
+         }
+       });
+
+       // Display the score and level
+       function displayScore() {
+         document.getElementById("score").textContent = "Score: " + score;
+         document.getElementById("level").textContent = "Level: " + level;
+       }
+
+       // Update the score every second
+       setInterval(function() {
+         score++;
+         displayScore();
+       }, 1000);
+     </script>
+
+     <div id="info">
+       <span id="score"></span><br>
+       <span id="level"></span>
+     </div>
+   </body>
+ </html>
