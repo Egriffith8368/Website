@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UNO Online</title>
+    <link rel="stylesheet" href="uno.css">
+</head>
+  <style>
+    #game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#players {
+    display: flex;
+    justify-content: center;
+}
+
+.player {
+    width: 300px;
+    height: 400px;
+    margin: 0 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.hand {
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 70px;
+    height: 100px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+#deck {
+    width: 70px;
+    height: 100px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+#played {
+    width: 70px;
+    height: 100px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+  </style>
+<body>
+  <script>
+    // Define the cards
+const colors = ['red', 'green', 'blue', 'yellow'];
+const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'skip', 'reverse', 'draw 2'];
+const special = ['wild', 'wild draw 4'];
+const cards = [];
+
+for (let color of colors) {
+    for (let number of numbers) {
+        cards.push({ type: 'number', color, number });
+        if (number !== '0') {
+            cards.push({ type: 'number', color, number });
+        }
+    }
+    for (let i = 0; i < 2; i++) {
+        cards.push({ type: 'special', color, number: 'skip' });
+        cards.push({ type: 'special', color, number: 'reverse' });
+        cards.push({ type: 'special', color, number: 'draw 2' });
+    }
+}
+
+for (let i = 0;
+  </script>
+    <div id="game">
+        <div id="players">
+            <div class="player" id="player1">
+                <div class="hand"></div>
+            </div>
+            <div class="player" id="player2">
+                <div class="hand"></div>
+            </div>
+        </div>
+        <div id="deck"></div>
+        <div id="played"></div>
+    </div>
+    <script src="uno.js"></script>
+</body>
+</html>
