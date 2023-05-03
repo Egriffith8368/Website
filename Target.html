@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Target Practice Game</title>
+	<style>
+		body {
+			background-color: #f8f9fa;
+			font-family: Arial, sans-serif;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		h1 {
+			font-size: 48px;
+			font-weight: bold;
+			margin-bottom: 20px;
+			color: #343a40;
+			text-shadow: 2px 2px 2px #ccc;
+		}
+
+		#game-board {
+			width: 500px;
+			height: 500px;
+			background-color: #fff;
+			margin: 0 auto;
+			position: relative;
+			box-shadow: 5px 5px 5px #ccc;
+		}
+
+		.target {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: #ff0000;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.target:hover {
+			transform: scale(1.2);
+			box-shadow: 0 0 10px #ff0000;
+		}
+
+		#score {
+			font-size: 24px;
+			font-weight: bold;
+			text-align: center;
+			margin-top: 20px;
+			color: #343a40;
+			text-shadow: 1px 1px 1px #ccc;
+		}
+
+		#score-value {
+			color: #28a745;
+		}
+
+		#level {
+			font-size: 24px;
+			font-weight: bold;
+			text-align: center;
+			margin-top: 20px;
+			color: #343a40;
+			text-shadow: 1px 1px 1px #ccc;
+		}
+
+		#level-value {
+			color: #007bff;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Target Practice Game</h1>
+
+		<div id="game-board"></div>
+
+		<div id="score">Score: <span id="score-value">0</span></div>
+
+		<div id="level">Level: <span id="level-value">1</span></div>
+	</div>
+
+	<script>
+		let score = 0;
+		let level = 1;
+		let targetSpeed = 5;
+
+		// Create targets and add them to the game board
+		const gameBoard = document.getElementById('game-board');
+
+		function createTarget() {
+			const target = document.createElement('div');
+			target.classList.add('target');
+			target.style.top = Math.floor(Math.random() * 450) + 'px';
+			target.style.left = Math.floor(Math.random() * 450) + 'px';
+			gameBoard.appendChild(target);
+
+			// Move the target across the screen
+			let x = 0;
+			const moveTarget = setInterval(() => {
+				x += targetSpeed;
+				target.style.left = x + 'px';
+
+				// Remove the target and decrement the score if it reaches the edge of the screen
+				if (x >= 500) {
+					clearInterval(moveTarget);
+					target.remove();
+					score--;
+					document.getElementById('score-value').textContent = score;
+				}
+			}, 50);
+  target.addEventListener('click', () => {
+				clearInterval(moveTarget);
+				target.remove();
+				score++;
+				document.getElementById('score-value').textContent = score;
+
+				// Increase the level and target speed if the score is a multiple of 10
+				if (score % 10 === 0) {
+					level++;
+					targetSpeed += 2;
+					document.getElementById('level-value').textContent = level;
+				}
+			});
+		}
+
+		setInterval(createTarget, 1000);
+	</script>
+</body>
+</html>
+		
