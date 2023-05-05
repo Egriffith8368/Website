@@ -1,0 +1,35 @@
+body {
+	background-color: black;
+}
+
+#maze {
+	width: 500px;
+	height: 500px;
+	border: 1px solid white;
+	margin: 50px auto;
+	position: relative;
+}
+
+#player {
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#items {
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+#timer {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: white;
+	font-size: 24px;
+}
